@@ -22,17 +22,17 @@
             <h1 class="is-size-1 has-text-weight-light">Panel de Administración</h1>
         </div>
         <div class="columns">
-            <div class="dropdown column is-three-fifths ">
-                <div class="dropdown-trigger ">
-                    <button class="button" aria-haspopup="true" aria-controls="dropdown-menu3">
-                    <span>Click me</span>
-                    <span class="icon is-small">
-                        <i class="fas fa-angle-down" aria-hidden="true"></i>
-                    </span>
+            <div class="dropdown column is-three-fifths">
+                <div class="dropdown-trigger">
+                    <button class="button" aria-haspopup="true" aria-controls="dropdown-menu3" onclick="cambiarEstado()">
+                        <span>Click me</span>
+                        <span class="icon is-small">
+                            <i class="fas fa-angle-down" aria-hidden="true"></i>
+                        </span>
                     </button>
                 </div>
-                <div class="dropdown-menu" id="dropdown-menu3" role="menu">
-                    <div class="dropdown-content">
+                <div class="dropdown-menu" id="menu-boton" role="menu">
+                    <div class="dropdown-content" id="menu-contenido">
                         <a href="#" class="dropdown-item"> Overview </a>
                         <a href="#" class="dropdown-item"> Modifiers </a>
                         <a href="#" class="dropdown-item"> Grid </a>
@@ -49,13 +49,32 @@
                 <div class="columns">
                     <h2 class="is-size-2 has-text-weight-light">Descargar</h2>
                 </div>
-
-
             </div>
         </div>
-        
     </main>
-    
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {cambiarEstado();});
+
+function cambiarEstado() {
+    const botonMenu = document.querySelector(".dropdown-trigger");
+    const contenidoMenu = document.getElementById("menu-contenido");
+
+    botonMenu.addEventListener("click", function(event) {
+        //event.stopPropagation();
+        const dropdown = botonMenu.closest('.dropdown');
+        dropdown.classList.toggle('is-active');
+    });
+
+    document.addEventListener("click", function(event) {
+        const dropdown = botonMenu.closest('.dropdown');
+        if (!dropdown.contains(event.target)) {
+            dropdown.classList.toggle('is-active');
+        }
+    });
+}
+
+    </script>
     <footer></footer>
 </body>
+
 </html>
