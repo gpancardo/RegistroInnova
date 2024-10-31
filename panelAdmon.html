@@ -6,6 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inicio</title>
+    <script src="/scripts/dropdown.js"></script>
 </head>
 <body>
     <nav id="navbar" class="porUsuario navbar is-info" role="navigation" aria-label="main navigation">
@@ -19,61 +20,40 @@
     </nav>
     <main class="container is-centered">
         <div class="columns is-centered is-mobile mt-6 mb-5">
-            <h1 class="is-size-1 has-text-weight-light">Panel de Administración</h1>
+          <h1 class="is-size-1 has-text-weight-light">Panel de Administración</h1>
         </div>
         <div class="columns">
-            <div class="dropdown column is-three-fifths">
-                <div class="dropdown-trigger">
-                    <button class="button" aria-haspopup="true" aria-controls="dropdown-menu3" onclick="cambiarEstado()">
-                        <span>Click me</span>
-                        <span class="icon is-small">
-                            <i class="fas fa-angle-down" aria-hidden="true"></i>
-                        </span>
-                    </button>
-                </div>
-                <div class="dropdown-menu" id="menu-boton" role="menu">
-                    <div class="dropdown-content" id="menu-contenido">
-                        <a href="#" class="dropdown-item"> Overview </a>
-                        <a href="#" class="dropdown-item"> Modifiers </a>
-                        <a href="#" class="dropdown-item"> Grid </a>
-                        <a href="#" class="dropdown-item"> Form </a>
-                        <a href="#" class="dropdown-item"> Elements </a>
-                        <a href="#" class="dropdown-item"> Components </a>
-                        <a href="#" class="dropdown-item"> Layout </a>
-                        <hr class="dropdown-divider" />
-                        <a href="#" class="dropdown-item"> More </a>
-                    </div>
-                </div>
+          <div class="dropdown column is-three-fifths">
+            <div id="menu-boton" class="dropdown-trigger">
+              <button class="button" aria-haspopup="true" aria-controls="dropdown-menu3" onclick="cambiarEstado()">
+                <span>Click me</span>
+                <span class="icon is-small">
+                  <i class="fas fa-angle-down" aria-hidden="true"></i>
+                </span>
+              </button>
             </div>
-            <div class="column">
-                <div class="columns">
-                    <h2 class="is-size-2 has-text-weight-light">Descargar</h2>
-                </div>
+            <div class="dropdown-menu" role="menu">
+              <div class="dropdown-content" id="menu-contenido">
+                <a href="#" class="dropdown-item"> Overview </a>
+                <a href="#" class="dropdown-item"> Modifiers </a>
+                <a href="#" class="dropdown-item"> Grid </a>
+                <a href="#" class="dropdown-item"> Form </a>
+                <a href="#" class="dropdown-item"> Elements </a>
+                <a href="#" class="dropdown-item"> Components </a>
+                <a href="#" class="dropdown-item"> Layout </a>
+                <hr class="dropdown-divider" />
+                <a href="#" class="dropdown-item"> More </a>
+              </div>
             </div>
+          </div>
+          <div class="column">
+            <div class="columns">
+              <h2 class="is-size-2 has-text-weight-light">Descargar</h2>
+            </div>
+          </div>
         </div>
-    </main>
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {cambiarEstado();});
-
-function cambiarEstado() {
-    const botonMenu = document.querySelector(".dropdown-trigger");
-    const contenidoMenu = document.getElementById("menu-contenido");
-
-    botonMenu.addEventListener("click", function(event) {
-        //event.stopPropagation();
-        const dropdown = botonMenu.closest('.dropdown');
-        dropdown.classList.toggle('is-active');
-    });
-
-    document.addEventListener("click", function(event) {
-        const dropdown = botonMenu.closest('.dropdown');
-        if (!dropdown.contains(event.target)) {
-            dropdown.classList.toggle('is-active');
-        }
-    });
-}
-
-    </script>
+      </main>
+      
     <footer></footer>
 </body>
 
