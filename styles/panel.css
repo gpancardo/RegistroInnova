@@ -1,5 +1,4 @@
 main {
-    min-height: 80vh;
     display: flex;
     justify-content: center;
     align-content: flex-end;
@@ -62,6 +61,10 @@ li p{
 .descarga button{
     height: 5vh;
     min-height: 30px;
+}
+h1 {
+    
+    order:3;
 }
 h2 {
     margin-top: 1vh;

@@ -4,6 +4,9 @@ body{
     border-right: .4vh solid #000;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
+main{
+    min-height: 80vh;
+}
 header {
     height: 9vh;
     border-bottom: .4vh solid #000;

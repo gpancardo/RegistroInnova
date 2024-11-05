@@ -3,49 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="styles/styles.css" />
+    <link rel="stylesheet" href="styles/form.css" />
     <title>Inicio de Sesión</title>
 </head>
 <body>
-    <nav id="navbar" class="porUsuario"></nav>
-    <form action="">
-        <div class="numeroCuenta"></div>
-        <div class="carrera">
-            <label for="carrera">Carrera</label>
-            <select name="carrera" id="">
-                <option value="Derecho">Derecho</option>
-                <option value="Economía">Econonomía</option>
-                <option value="RRII">RRII</option>
-                <option value="Arquitectura">Arquitectura</option>
-                <option value="ICO">ICO</option>
-                <option value="IEE">IEE</option>
-                <option value="IM">IM</option>
-                <option value="IC">IC</option>
-                <option value="II">II</option>
-                <option value="Sociología">Sociología</option>
-                <option value="PDA">PDA</option>
-                <option value="CyP">CyP</option>
-                <option value="Diseño Industrial">Diseño Industrial</option>
-                <option value="Pedagogía">Pedagogía</option>
-            </select>
-        </div>
-        <div class="nombre">
-            <label for="nombre">Nombres</label>
-            <input type="text" name="nombre" id="">
-        </div>
-        <div class="apellidos">
-            <label for="apellidos">Apellidos</label>
-            <input type="text" name="apellidos" id="">
-        </div>
-        <div class="correo">
-            <label for="correo">Correo Electrónico</label>
-            <input type="email" name="correo" id="">
-        </div>
-        <div class="contrasena">
-            <label for="contrasena">Contraseña</label>
-            <input type="password" name="contrasena" id="">
-        </div>
-        <div class="enviar"> <button type="submit">Enviar</button></div>
-    </form>
+    <header>
+        <nav>
+            <a href="index.html"><i class="fas fa-home fa-lg"></i></a>
+        </nav>
+    </header>
+    <main>
+        <h1>Inicio de Sesión</h1>  
+        <form action="">
+            <div class="numeroCuenta">
+                <label for="numeroCuenta">Número de Cuenta:</label>
+                <input type="number" name="numeroCuenta" id="">
+            </div>
+            <div class="contrasena">
+                <label for="contrasena">Contraseña</label>
+                <input type="password" name="contrasena" id="">
+            </div>
+            <div class="enviar"> <button type="submit">Iniciar Sesión</button></div>
+        </form>
+    </main>
     <footer></footer>
 </body>
 </html>

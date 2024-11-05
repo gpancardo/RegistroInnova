@@ -1,5 +1,4 @@
 main {
-    height: 80vh;
     padding-left: 35%;
     padding-right: 35%;
     background-image: url("/src/fes.jpg");
@@ -23,12 +22,24 @@ main button{
 #inicioSesion{
     background-color: #0B6E4F;
 }
+#inicioSesion:hover{
+    background-color: #0b6e4fc3;
+}
+#inicioSesion:active{
+    background-color: #0b6e4f7a;
+}
 #registro{
     background-color: #DE541E;
 }
+#registro:hover{
+    background-color: #de541eb2;
+}
+#registro:active{
+    background-color: #de541e73;
+}
 h1{
-    /* color: #fff; */
-    order:2;
+    background-color: #F8E6D2;
+    order:3;
 }
 nav {
     height: inherit;
