@@ -1,5 +1,6 @@
-let ubicacion;
+        let ubicacion;
         let casos = ["evento", "misEventos", "eventos"];
+        let dropdownContainer = document.getElementById('container');
 
         function escritura(caso) {
             if (casos.includes(caso)) {
@@ -13,11 +14,15 @@ let ubicacion;
                     case "eventos":
                         plantillaEventosGeneral();
                         break;
+                    case "completar":
+                        completar();
+                        break;
                 }
             }
         }
 
         function plantillaEvento() {
+            reestablecerForm();
             const form = document.createElement("form");
 
             // Campos para el evento principal
@@ -27,6 +32,9 @@ let ubicacion;
             tituloInput.type = "text";
             tituloInput.name = "titulo";
             tituloInput.required = true;
+            const tituloDiv = document.createElement("div");
+            tituloDiv.appendChild(tituloLabel);
+            tituloDiv.appendChild(tituloInput);
 
             const descripcionLabel = document.createElement("label");
             descripcionLabel.textContent = "Descripción: ";
@@ -34,6 +42,9 @@ let ubicacion;
             descripcionInput.type = "text";
             descripcionInput.name = "descripcion";
             descripcionInput.required = true;
+            const descripcionDiv = document.createElement("div");
+            descripcionDiv.appendChild(descripcionLabel);
+            descripcionDiv.appendChild(descripcionInput);
 
             const ubicacionLabel = document.createElement("label");
             ubicacionLabel.textContent = "Ubicación: ";
@@ -41,6 +52,9 @@ let ubicacion;
             ubicacionInput.type = "text";
             ubicacionInput.name = "ubicacion";
             ubicacionInput.required = true;
+            const ubicacionDiv = document.createElement("div");
+            ubicacionDiv.appendChild(ubicacionLabel);
+            ubicacionDiv.appendChild(ubicacionInput);
 
             const ponenteLabel = document.createElement("label");
             ponenteLabel.textContent = "Ponente: ";
@@ -48,6 +62,9 @@ let ubicacion;
             ponenteInput.type = "text";
             ponenteInput.name = "ponente";
             ponenteInput.required = true;
+            const ponenteDiv = document.createElement("div");
+            ponenteDiv.appendChild(ponenteLabel);
+            ponenteDiv.appendChild(ponenteInput);
 
             const horaLabel = document.createElement("label");
             horaLabel.textContent = "Hora: ";
@@ -55,49 +72,53 @@ let ubicacion;
             horaInput.type = "time";
             horaInput.name = "hora";
             horaInput.required = true;
+            const horaDiv = document.createElement("div");
+            horaDiv.appendChild(horaLabel);
+            horaDiv.appendChild(horaInput);
 
             // Botón para agregar subeventos
             const agregarSubevento = document.createElement("button");
             agregarSubevento.type = "button";
             agregarSubevento.textContent = "Agregar Subevento";
-
-            // Contenedor para subeventos
-            const subeventosContainer = document.createElement("div");
+            const agregarDiv = document.createElement("div");
+            agregarDiv.classList.add("agregarSubevento");
+            agregarDiv.appendChild(agregarSubevento);
 
             // Evento para agregar subeventos de forma infinita
             agregarSubevento.addEventListener("click", function () {
                 const subeventoForm = createSubeventoForm();
-                subeventosContainer.appendChild(subeventoForm);
+                agregarDiv.insertAdjacentElement("afterend", subeventoForm);
             });
 
             // Botón completar
             const completar = document.createElement("button");
             completar.type = "button";
             completar.textContent = "Completar";
+            const completarDiv = document.createElement("div");
+            completarDiv.classList.add("completar");
+            completarDiv.appendChild(completar);
+
+            //Evento para completar el llenado de formulario
+            completar.addEventListener("click",()=>{
+                reestablecerForm();
+            });
 
             // Añadir elementos al formulario
-            form.appendChild(tituloLabel);
-            form.appendChild(tituloInput);
+            form.appendChild(tituloDiv);
             form.appendChild(document.createElement("br"));
-            form.appendChild(descripcionLabel);
-            form.appendChild(descripcionInput);
+            form.appendChild(descripcionDiv);
             form.appendChild(document.createElement("br"));
-            form.appendChild(ubicacionLabel);
-            form.appendChild(ubicacionInput);
+            form.appendChild(ubicacionDiv);
             form.appendChild(document.createElement("br"));
-            form.appendChild(ponenteLabel);
-            form.appendChild(ponenteInput);
+            form.appendChild(ponenteDiv);
             form.appendChild(document.createElement("br"));
-            form.appendChild(horaLabel);
-            form.appendChild(horaInput);
+            form.appendChild(horaDiv);
             form.appendChild(document.createElement("br"));
-            form.appendChild(agregarSubevento);
-            form.appendChild(subeventosContainer); // Contenedor de subeventos
-            form.appendChild(document.createElement("br"));
-            form.appendChild(completar);
+            form.appendChild(agregarDiv);
+            form.appendChild(completarDiv);
 
             // Añadir el formulario al cuerpo o a un contenedor
-            document.body.appendChild(form);
+            dropdownContainer.appendChild(form);
         }
 
         function createSubeventoForm() {
@@ -157,4 +178,11 @@ let ubicacion;
             subeventoForm.appendChild(document.createElement("br"));
 
             return subeventoForm;
+        }
+
+        function reestablecerForm(){
+            const forms = document.querySelectorAll("form");
+            forms.forEach(form => {
+                form.remove();
+            });
         }

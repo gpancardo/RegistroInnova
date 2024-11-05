@@ -16,18 +16,28 @@
     </header>
     <main>
         <h1>Panel de Administración</h1>
-        <div class="dropdownContainer">
-            <button onclick="escritura('evento')" class="dropEventos">Crear Nuevo Evento</button>
+        <div id="container" class="dropdownContainer">
+            <button onclick="cambiarEstado()" id="menu-boton" class="dropEventos">Eventos</button>
             <ol id="menuEventos" class="contenidoDespliegue">
-                <li><p class="titulo">Nombre del evento</p><p>No. horas de formación</p><p>No.horas</p></li>
+                <li><p class="titulo">Nombre del evento</p><p>Horas por subevento</p><p>Horas por evento</p></li>
                 <li><p class="titulo">Festival del Emprendimiento</p><p>10</p><p>10</p></li>
             </ol>
-            <button onclick="escritura('misEventos')">Mis Eventos</button>
-            <button onclick="escritura('eventos')">Eventos Generales</button>
+            <button onclick="escritura('evento')">Crear</button>
+            <button onclick="escritura('evento')">Editar</button>
+        </div>
+        <div class="descarga">
+          <h2>Descarga</h2>
+          <p>Descargar todos</p>
+          <button>.csv</button>
+          <button>.json</button>
+          <p>Descargar uno</p>
+          <button>.csv</button>
+          <button>.json</button>
         </div>
     </main>
     <footer></footer>
 
     <script src="scripts/escritura.js"></script>
+    <script src="scripts/dropdown.js"></script>
 </body>
 </html>
