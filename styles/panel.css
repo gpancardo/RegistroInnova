@@ -1,0 +1,39 @@
+main {
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    flex-wrap: wrap;
+}
+.dropdown {
+    width: 60vw;
+    /* grid */
+    display: grid;
+    grid-template-columns: 30vw;
+}
+#dropEventos {
+    height: 9vh;
+    min-height: 50px;
+    margin: 2%;
+    font-size: medium;
+    color: #fff;
+    /* grid */
+    grid-column: 1 2;
+}
+
+/* ESTO SE VA A MODIFICAR */
+.contenido-drop {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+h1 {
+    width: 50vw;;
+}
+.mostrar{
+    display: block;
+}

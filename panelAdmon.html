@@ -1,60 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css"> -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inicio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="styles/styles.css" />
+    <link rel="stylesheet" href="styles/panel.css" />
     <script src="/scripts/dropdown.js"></script>
+    <title>Panel</title>
 </head>
-<body>
-    <nav id="navbar" class="porUsuario navbar is-info" role="navigation" aria-label="main navigation">
-        <div class="navbar-brand">
-            <a class="navbar-item" href="index.html">
-                <span class="icon is-large">
-                    <i class="fas fa-home fa-lg"></i>
-                </span>
-            </a>
+<body>    
+    <header>
+        <nav>
+            <a href="index.html"><i class="fas fa-home fa-lg"></i></a>
+        </nav>
+    </header>
+  <main>
+    <h1>Panel de Administración</h1>
+    <div class="dropdown">
+      <button onclick="cambiarEstado()" id="dropEventos">Eventos</button>
+      <ol id="menuEventos" class="contenido-drop">
+        <li><p>Festival del Emprendimiento</p><p>10</p><p>10</p></li>
+        <li><p>Nombre del evento</p><p>No. horas por subevento</p><p>No.horas</p></li>
+      </ol>
+      <button id="crear">Crear Nuevo</button>
+      <button id="editar">Editar</button>
+    </div>
+    <!-- <div class="dropdown">
+      <div id="menu-boton" class="dropdown-trigger">
+        <button class="button" aria-haspopup="true" aria-controls="dropdown-menu3" onclick="cambiarEstado()">
+          <span>Click me</span>
+          <i class="fas fa-angle-down" aria-hidden="true"></i>
+        </button>
+      </div>
+      <div class="dropdown-menu" role="menu">
+        <div class="dropdown-content" id="menu-contenido">
+          <a href="#" class="dropdown-item"> Overview </a>
+          <a href="#" class="dropdown-item"> Modifiers </a>
+          <a href="#" class="dropdown-item"> Grid </a>
+          <a href="#" class="dropdown-item"> Form </a>
+          <a href="#" class="dropdown-item"> Elements </a>
+          <a href="#" class="dropdown-item"> Components </a>
+          <a href="#" class="dropdown-item"> Layout </a>
+          <hr class="dropdown-divider" />
+          <a href="#" class="dropdown-item"> More </a>
         </div>
-    </nav>
-    <main class="container is-centered">
-        <div class="columns is-centered is-mobile mt-6 mb-5">
-          <h1 class="is-size-1 has-text-weight-light">Panel de Administración</h1>
-        </div>
-        <div class="columns">
-          <div class="dropdown column is-three-fifths">
-            <div id="menu-boton" class="dropdown-trigger">
-              <button class="button" aria-haspopup="true" aria-controls="dropdown-menu3" onclick="cambiarEstado()">
-                <span>Click me</span>
-                <span class="icon is-small">
-                  <i class="fas fa-angle-down" aria-hidden="true"></i>
-                </span>
-              </button>
-            </div>
-            <div class="dropdown-menu" role="menu">
-              <div class="dropdown-content" id="menu-contenido">
-                <a href="#" class="dropdown-item"> Overview </a>
-                <a href="#" class="dropdown-item"> Modifiers </a>
-                <a href="#" class="dropdown-item"> Grid </a>
-                <a href="#" class="dropdown-item"> Form </a>
-                <a href="#" class="dropdown-item"> Elements </a>
-                <a href="#" class="dropdown-item"> Components </a>
-                <a href="#" class="dropdown-item"> Layout </a>
-                <hr class="dropdown-divider" />
-                <a href="#" class="dropdown-item"> More </a>
-              </div>
-            </div>
-          </div>
-          <div class="column">
-            <div class="columns">
-              <h2 class="is-size-2 has-text-weight-light">Descargar</h2>
-            </div>
-          </div>
-        </div>
-      </main>
-      
-    <footer></footer>
+      </div>
+    </div> -->
+    <!-- <div id="descarga">
+      <h2>Descarga</h2>
+      <p>Descargar todos</p>
+      <button>.csv</button>
+      <button>.json</button>
+      <p>Descargar uno</p>
+      <button>.csv</button>
+      <button>.json</button>
+    </div> -->
+  </main>
+  <footer></footer>
 </body>
 
 </html>
