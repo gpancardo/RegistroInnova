@@ -22,7 +22,7 @@ button {
     /* grid */
     grid-column: 1 / 3;
 }
-.dropdown {
+.contenidoDespliegue {
     display: none;
     margin: 0;
     background-color: #f1f1f1;
@@ -33,6 +33,10 @@ button {
 }
 h1 {
     width: 50vw;
+}
+li {
+    display: flex;
+    column-gap: 5vw;
 }
 .is-active{
     display: block;

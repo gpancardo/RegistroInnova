@@ -1,5 +1,5 @@
 function cambiarEstado() {
-    const dropdown = document.querySelector('.dropdown');
+    const dropdown = document.querySelector('.contenidoDespliegue');
     dropdown.classList.toggle('is-active');
   }
   
