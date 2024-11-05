@@ -27,6 +27,10 @@ footer {
     min-height: 56px;
     border-top: .4vh solid #000;
     background-color: #20A4F3;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
 }
 /* section {
     border: 1px solid purple;
