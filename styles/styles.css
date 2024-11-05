@@ -1,6 +1,7 @@
 body{
     margin: 0%;
-    border: .4vh solid #000;
+    border-left: .4vh solid #000;
+    border-right: .4vh solid #000;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 header {
