@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css"> -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="styles/styles.css" />
     <link rel="stylesheet" href="styles/panel.css" />
-    <script src="/scripts/dropdown.js"></script>
     <title>Panel</title>
 </head>
 <body>
@@ -16,28 +14,21 @@
             <a href="index.html"><i class="fas fa-home fa-lg"></i></a>
         </nav>
     </header>
-  <main>
-    <h1>Panel de Administración</h1>
-    <div class="dropdownContainer">
-      <button onclick="cambiarEstado('contenidoDespliegue')" id="menu-boton" class="dropEventos">Eventos</button>
-      <ol id="menuEventos" class="contenidoDespliegue">
-        <li><p class="titulo">Nombre del evento</p><p>No. horas de formación</p><p>No.horas</p></li>
-        <li><p class="titulo">Festival del Emprendimiento</p><p>10</p><p>10</p></li>
-      </ol>
-      <button id="crear">Crear Nuevo</button>
-      <button id="editar">Editar</button>
-    </div>
-    <div class="descarga">
-      <h2>Descarga</h2>
-      <p>Descargar todos</p>
-      <button>.csv</button>
-      <button>.json</button>
-      <p>Descargar uno</p>
-      <button>.csv</button>
-      <button>.json</button>
-    </div>
-  </main>
-  <footer></footer>
-</body>
+    <main>
+        <h1>Panel de Administración</h1>
+        <div class="dropdownContainer">
+            <button onclick="escritura('evento')" class="dropEventos">Crear Nuevo Evento</button>
+            <ol id="menuEventos" class="contenidoDespliegue">
+                <li><p class="titulo">Nombre del evento</p><p>No. horas de formación</p><p>No.horas</p></li>
+                <li><p class="titulo">Festival del Emprendimiento</p><p>10</p><p>10</p></li>
+            </ol>
+            <button onclick="escritura('misEventos')">Mis Eventos</button>
+            <button onclick="escritura('eventos')">Eventos Generales</button>
+        </div>
+    </main>
+    <footer></footer>
 
+    <!-- JavaScript Code -->
+    <script src="scripts/escritura.js"></script>
+</body>
 </html>
