@@ -22,7 +22,6 @@
         }
 
         function plantillaEvento() {
-            reestablecerForm();
             const form = document.createElement("form");
 
             // Campos para el evento principal
@@ -100,7 +99,9 @@
 
             //Evento para completar el llenado de formulario
             completar.addEventListener("click",()=>{
-                reestablecerForm();
+                if ((confirm('Nuevo evento agregado con éxito'))==true){
+                    location.reload();
+                }
             });
 
             // Añadir elementos al formulario
@@ -178,11 +179,4 @@
             subeventoForm.appendChild(document.createElement("br"));
 
             return subeventoForm;
-        }
-
-        function reestablecerForm(){
-            const forms = document.querySelectorAll("form");
-            forms.forEach(form => {
-                form.remove();
-            });
         }
