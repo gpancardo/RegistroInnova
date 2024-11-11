@@ -6,7 +6,15 @@
             if (casos.includes(caso)) {
                 switch (caso) {
                     case "evento":
-                        plantillaEvento();
+                        let form = document.querySelector("form");
+                        if (form) {
+                            if ((confirm('Está editando un evento. Si crea un nuevo evento perderá sus cambios. ¿Proceder?'))==true){
+                                form.remove()
+                                plantillaEvento();
+                            }
+                        } else {
+                            plantillaEvento();
+                        }
                         break;
                     case "misEventos":
                         plantillaMisEventos();
