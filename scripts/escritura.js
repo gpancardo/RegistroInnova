@@ -131,8 +131,12 @@
         }
 
         function createSubeventoForm() {
+
             const subeventoForm = document.createElement("div");
             subeventoForm.classList.add("subevento");
+
+            const tituloSub = document.createElement("h2");
+            tituloSub.textContent="Subevento";
 
             const tituloLabel = document.createElement("label");
             tituloLabel.textContent = "Título: ";
@@ -170,6 +174,7 @@
             horaInput.required = true;
 
             // Añadir campos al formulario de subevento
+            subeventoForm.appendChild(tituloSub);
             subeventoForm.appendChild(tituloLabel);
             subeventoForm.appendChild(tituloInput);
             subeventoForm.appendChild(document.createElement("br"));
