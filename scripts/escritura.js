@@ -94,7 +94,7 @@
             // Evento para agregar subeventos de forma infinita
             agregarSubevento.addEventListener("click", function () {
                 const subeventoForm = createSubeventoForm();
-                agregarDiv.insertAdjacentElement("afterend", subeventoForm);
+                agregarDiv.insertAdjacentElement("beforebegin", subeventoForm);
             });
 
             // Botón completar

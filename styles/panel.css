@@ -47,9 +47,11 @@ li p{
 form{
     padding-left: 2.5vw;
     padding-bottom: 15vh;
+    margin-bottom: 2vh;
     background-color: #f1f1f1;
     border-right: .4vh solid #000;
     border-left: .4vh solid #000;
+    border-bottom: .4vh solid #000;
     /* grid */
     grid-column: span 4;
     display: grid;
