@@ -1,0 +1,71 @@
+main {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 10vh;
+    margin-bottom: 5%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+.evento{
+    width: 100%;
+    /* display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; */
+}
+button {
+    height: 9vh;
+    min-height: 50px;
+    width: 100%;
+    font-size: medium;
+    color: #000;
+    /* grid */
+    grid-column: span 2;
+}
+#misEventos{
+    background-color: #000;
+    color: #fff;
+}
+#misEventos:hover{
+    background-color: #6b6a6a;
+    color: #fff;
+}
+#misEventos:active{
+    background-color: #b0b0b0;
+    color: #fff;
+}
+#registrarse{
+    background-color: #F5E663;
+}
+#registrarse:hover{
+    background-color: #dacd58;
+}
+#registrarse:active{
+    background-color: #aea449;
+}
+#lleno{
+    background-color: #20A4F3;
+    color: #fff;
+}
+#inscrito{
+    background-color: #0B6E4F;
+    color: #fff;
+}
+p{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+@media (max-width: 800px) {
+    main{
+        margin: 10%;
+    }
+    main button{
+        height: 5vh;
+        min-height: 34px;
+        margin: 2%;
+        flex: 100%;
+    }
+}
