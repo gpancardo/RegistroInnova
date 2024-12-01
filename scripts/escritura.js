@@ -31,79 +31,100 @@
 
         function plantillaEvento() {
             const form = document.createElement("form");
+            form.classList.add("grid-item");
+
+            const tituloAdmin = document.createElement("h2");
+            tituloAdmin.textContent="Administrar Evento";
 
             // Campos para el evento principal
             const tituloLabel = document.createElement("label");
             tituloLabel.textContent = "Título: ";
             const tituloInput = document.createElement("input");
+            tituloInput.classList.add("redondeado");
             tituloInput.type = "text";
             tituloInput.name = "titulo";
             tituloInput.required = true;
             const tituloDiv = document.createElement("div");
             tituloDiv.appendChild(tituloLabel);
             tituloDiv.appendChild(tituloInput);
+            tituloDiv.classList.add("display-flex");
+            tituloDiv.classList.add("flex-direction-column");
 
             const descripcionLabel = document.createElement("label");
             descripcionLabel.textContent = "Descripción: ";
             const descripcionInput = document.createElement("input");
+            descripcionInput.classList.add("redondeado");
             descripcionInput.type = "text";
             descripcionInput.name = "descripcion";
             descripcionInput.required = true;
             const descripcionDiv = document.createElement("div");
             descripcionDiv.appendChild(descripcionLabel);
             descripcionDiv.appendChild(descripcionInput);
+            descripcionDiv.classList.add("display-flex");
+            descripcionDiv.classList.add("flex-direction-column");
 
             const ubicacionLabel = document.createElement("label");
             ubicacionLabel.textContent = "Ubicación: ";
             const ubicacionInput = document.createElement("input");
+            ubicacionInput.classList.add("redondeado");
             ubicacionInput.type = "text";
             ubicacionInput.name = "ubicacion";
             ubicacionInput.required = true;
             const ubicacionDiv = document.createElement("div");
             ubicacionDiv.appendChild(ubicacionLabel);
             ubicacionDiv.appendChild(ubicacionInput);
+            ubicacionDiv.classList.add("display-flex");
+            ubicacionDiv.classList.add("flex-direction-column");
 
             const ponenteLabel = document.createElement("label");
             ponenteLabel.textContent = "Ponente: ";
             const ponenteInput = document.createElement("input");
+            ponenteInput.classList.add("redondeado");
             ponenteInput.type = "text";
             ponenteInput.name = "ponente";
             ponenteInput.required = true;
             const ponenteDiv = document.createElement("div");
             ponenteDiv.appendChild(ponenteLabel);
             ponenteDiv.appendChild(ponenteInput);
+            ponenteDiv.classList.add("display-flex");
+            ponenteDiv.classList.add("flex-direction-column");
 
             const horaLabel = document.createElement("label");
             horaLabel.textContent = "Hora: ";
             const horaInput = document.createElement("input");
+            horaInput.classList.add("redondeado");
             horaInput.type = "time";
             horaInput.name = "hora";
             horaInput.required = true;
             const horaDiv = document.createElement("div");
             horaDiv.appendChild(horaLabel);
             horaDiv.appendChild(horaInput);
+            horaDiv.classList.add("display-flex");
+            horaDiv.classList.add("flex-direction-column");
 
             // Botón para agregar subeventos
             const agregarSubevento = document.createElement("button");
             agregarSubevento.type = "button";
+            agregarSubevento.classList.add("morado");
+            agregarSubevento.classList.add("redondeado");
             agregarSubevento.textContent = "Agregar Subevento";
-            const agregarDiv = document.createElement("div");
-            agregarDiv.classList.add("agregarSubevento");
-            agregarDiv.appendChild(agregarSubevento);
+            const botonesDiv = document.createElement("div");
+            botonesDiv.classList.add("botones");
+            botonesDiv.appendChild(agregarSubevento);
 
             // Evento para agregar subeventos de forma infinita
             agregarSubevento.addEventListener("click", function () {
                 const subeventoForm = createSubeventoForm();
-                agregarDiv.insertAdjacentElement("beforebegin", subeventoForm);
+                botonesDiv.insertAdjacentElement("beforebegin", subeventoForm);
             });
 
             // Botón completar
             const completar = document.createElement("button");
             completar.type = "button";
+            completar.classList.add("rosa");
+            agregarSubevento.classList.add("redondeado");
             completar.textContent = "Completar";
-            const completarDiv = document.createElement("div");
-            completarDiv.classList.add("completar");
-            completarDiv.appendChild(completar);
+            botonesDiv.appendChild(completar);
 
             //Evento para completar el llenado de formulario
             completar.addEventListener("click",()=>{
@@ -113,6 +134,7 @@
             });
 
             // Añadir elementos al formulario
+            form.appendChild(tituloAdmin);
             form.appendChild(tituloDiv);
             form.appendChild(document.createElement("br"));
             form.appendChild(descripcionDiv);
@@ -123,8 +145,7 @@
             form.appendChild(document.createElement("br"));
             form.appendChild(horaDiv);
             form.appendChild(document.createElement("br"));
-            form.appendChild(agregarDiv);
-            form.appendChild(completarDiv);
+            form.appendChild(botonesDiv);
 
             // Añadir el formulario al cuerpo o a un contenedor
             dropdownContainer.appendChild(form);
@@ -135,12 +156,13 @@
             const subeventoForm = document.createElement("div");
             subeventoForm.classList.add("subevento");
 
-            const tituloSub = document.createElement("h2");
+            const tituloSub = document.createElement("h3");
             tituloSub.textContent="Subevento";
 
             const tituloLabel = document.createElement("label");
             tituloLabel.textContent = "Título: ";
             const tituloInput = document.createElement("input");
+            tituloInput.classList.add("redondeado");
             tituloInput.type = "text";
             tituloInput.name = "subtitulo";
             tituloInput.required = true;
@@ -148,6 +170,7 @@
             const descripcionLabel = document.createElement("label");
             descripcionLabel.textContent = "Descripción: ";
             const descripcionInput = document.createElement("input");
+            descripcionInput.classList.add("redondeado");
             descripcionInput.type = "text";
             descripcionInput.name = "subdescripcion";
             descripcionInput.required = true;
@@ -155,6 +178,7 @@
             const ubicacionLabel = document.createElement("label");
             ubicacionLabel.textContent = "Ubicación: ";
             const ubicacionInput = document.createElement("input");
+            ubicacionInput.classList.add("redondeado");
             ubicacionInput.type = "text";
             ubicacionInput.name = "sububicacion";
             ubicacionInput.required = true;
@@ -162,6 +186,7 @@
             const ponenteLabel = document.createElement("label");
             ponenteLabel.textContent = "Ponente: ";
             const ponenteInput = document.createElement("input");
+            ponenteInput.classList.add("redondeado");
             ponenteInput.type = "text";
             ponenteInput.name = "subponente";
             ponenteInput.required = true;
@@ -169,6 +194,7 @@
             const horaLabel = document.createElement("label");
             horaLabel.textContent = "Hora: ";
             const horaInput = document.createElement("input");
+            horaInput.classList.add("redondeado");
             horaInput.type = "time";
             horaInput.name = "subhora";
             horaInput.required = true;

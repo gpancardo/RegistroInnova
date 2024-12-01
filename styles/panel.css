@@ -1,4 +1,10 @@
 main {
+    margin: 2rem;
+    min-height: 70vh;
+    background-color: #ECEFF4;
+    border-radius: .3rem;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    padding: 3rem 2rem 3rem 2rem;
     display: flex;
     justify-content: center;
     align-content: flex-end;
@@ -11,91 +17,91 @@ main {
     display: grid;
     grid-template-columns: 15vw 15vw 15vw 15vw;
 }
+.grid-item{
+    border: 1px solid #000;
+}
 button {
     height: 9vh;
     min-height: 50px;
     font-size: medium;
     color: #000;
+    border-radius: 0;
     /* grid */
     grid-column: span 2;
 }
 .dropEventos {
     /* grid */
     grid-column: span 4;
+    text-align: start;
 }
 .contenidoDespliegue {
     display: none;
     padding: 0;
     margin: 0;
     list-style-type: none;
-    background-color: #f1f1f1;
-    border-right: .4vh solid #000;
-    border-left: .4vh solid #000;
     /* grid */
     grid-column: span 4;
 }
-li {
+li, .evento {
     width: 100%;
     /* grid */
     display: grid;
-    grid-template-columns: 19vw 19vw 19vw auto;
+    grid-template-columns: 1vw 19vw 19vw auto;
     column-gap: 1vw;
+}
+.evento:hover{
+    background-color: #d2d6dc;
+}
+.evento:active{
+    background-color: #a7acb5;
 }
 li p{
     padding-left: 1vw;
 }
 form{
-    padding-left: 2.5vw;
-    padding-bottom: 15vh;
-    margin-bottom: 2vh;
-    background-color: #f1f1f1;
-    border-right: .4vh solid #000;
-    border-left: .4vh solid #000;
-    border-bottom: .4vh solid #000;
-    /* grid */
     grid-column: span 4;
-    display: grid;
-    grid-template-columns: 27.5vw 27.5vw;
-}
-form div{
-    display: flex;
-    flex-direction: column;
-    margin-top: 4vh;
-    /* grid */
-    grid-column: span 2;
-}
-input,select{
-    min-height: 5vh;
-    border: .4vh solid #000;
-    border-radius: 0;
 }
 .descarga{
     width: 20vw;
     padding-left: 1vw;
     padding-right: 1vw;
+    font-family: "Kulim Park", serif;
+    font-weight: 400;
+    font-style: normal;
     /* grid */
     display: grid;
     grid-template-columns: 25% 25% 25% 25%;
 }
 .descarga p{
+    margin-top: .5rem;
     grid-column: span 2;
-    margin: 0;
-    border-top: .4vh solid #000;
-    border-bottom: .4vh solid #000;
-    border-left: .4vh solid #000;
 }
 .descarga button{
     height: 5vh;
     min-height: 30px;
     grid-column: span 1;
+    border: 0;
+    border-radius: .3rem;
+    margin: 0 .3rem 0 .3rem;
 }
 h1 { 
     order:3;
+    width:80vw;
 }
 h2 {
-    margin-top: 1vh;
+    margin-bottom: 1vh;
     grid-column: 1/4;
 }
 .is-active{
     display: block;
+}
+.botones{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+}
+.botones button{
+    width: 20vw;
+    border: 0;
+    border-radius: .3rem;
 }

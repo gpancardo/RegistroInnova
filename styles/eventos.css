@@ -1,12 +1,14 @@
+body{
+    padding: 2rem;
+}
 main {
     display: flex;
     justify-content: flex-start;
     align-items: center;
     flex-direction: column;
-    margin-top: 10vh;
-    margin-bottom: 5%;
-    margin-left: 10%;
-    margin-right: 10%;
+    border-radius: .3rem;
+    background-color: hsl(218, 27%, 94%);
+    padding: 2rem;
 }
 .evento{
     width: 100%;
@@ -16,42 +18,19 @@ main {
     justify-content: center; */
 }
 button {
-    height: 9vh;
-    min-height: 50px;
+    height: 5vh;
     width: 100%;
     font-size: medium;
     color: #000;
     /* grid */
     grid-column: span 2;
 }
-#misEventos{
-    background-color: #000;
-    color: #fff;
+.lleno:hover{
+    background-color: #652E79;
 }
-#misEventos:hover{
-    background-color: #6b6a6a;
-    color: #fff;
-}
-#misEventos:active{
-    background-color: #b0b0b0;
-    color: #fff;
-}
-#registrarse{
-    background-color: #F5E663;
-}
-#registrarse:hover{
-    background-color: #dacd58;
-}
-#registrarse:active{
-    background-color: #aea449;
-}
-#lleno{
-    background-color: #20A4F3;
-    color: #fff;
-}
-#inscrito{
-    background-color: #0B6E4F;
-    color: #fff;
+.lleno:active{
+    
+    background-color: #652E79;
 }
 p{
     width: 100%;
@@ -59,11 +38,11 @@ p{
     flex-direction: column;
 }
 @media (max-width: 800px) {
-    main{
-        margin: 10%;
+    body{
+        padding: 0;
     }
-    main button{
-        height: 5vh;
+    button{
+        height: 9vh;
         min-height: 34px;
         margin: 2%;
         flex: 100%;

@@ -4,31 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="styles/styles.css" />
-    <link rel="stylesheet" href="styles/form.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?fami   ly=Kumbh+Sans:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kulim+Park:ital,wght@0,200;0,300;0,400;0,600;0,700;1,200;1,300;1,400;1,600;1,700&family=Kumbh+Sans:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/index.css" />
     <title>Inicio de Sesión</title>
 </head>
-<body>
-    <header>
-        <nav>
-            <a href="index.html"><i class="fas fa-home fa-lg"></i></a>
-        </nav>
-    </header>
-    <main>
-        <h1>Inicio de Sesión</h1>  
+<body class="display-flex justify-content-center align-items-center">
+    <main class="ingreso display-flex justify-content-flex-start flex-direction-column glass">
         <form>
-            <div class="numeroCuenta">
+            <h1 class="bold-heading">Inicio de Sesión</h1>  
+            <div class="numeroCuenta display-flex flex-direction-column regular-paragraph">
                 <label for="numeroCuenta">Número de Cuenta:</label>
-                <input type="number" name="numeroCuenta" id="numeroCuenta">
+                <input type="number" name="numeroCuenta" id="numeroCuenta" class="redondeado">
             </div>
-            <div class="contrasena">
+            <div class="contrasena display-flex flex-direction-column regular-paragraph">
                 <label for="contrasena">Contraseña</label>
-                <input type="password" name="contrasena">
+                <input type="password" name="contrasena" id="contrasena" class="redondeado">
             </div>
-            <div class="enviar"><button type="submit" id="inicioSesion">Iniciar Sesión</button></div>
+            <div class="enviar display-flex flex-direction-column">
+                <button type="submit" class="morado bold-paragraph texto-blanco redondeado sin-borde" class="redondeado">Iniciar Sesión</button>
+            </div>
         </form>
     </main>
-    <footer></footer>
     <script src="/scripts/links.js"></script>
 </body>
 </html>

@@ -1,76 +1,182 @@
-main {
-    padding-left: 35%;
-    padding-right: 35%;
-    background-image: url("/src/fes.jpg");
-    background-repeat:no-repeat;
-    background-position: top;
-    background-size: cover;
+body{
+    margin: 0%;
+    min-height: 100vh;
+    background-image: linear-gradient(45deg, #4BD4D4 , #652E79);
+}
+
+/* DISPLAY FLEX */
+
+.display-flex{
     display: flex;
+}
+.justify-content-center{
     justify-content: center;
-    align-content:center;
-    flex-wrap: wrap-reverse;
 }
-main button{
-    height: 9vh;
-    min-height: 50px;
-    margin: 2%;
-    font-size: medium;
-    color: #fff;
-    width: 13vw;
-    min-width: 158px;
-}
-#inicioSesion{
-    background-color: #0B6E4F;
-}
-#inicioSesion:hover{
-    background-color: #0b6e4fc3;
-}
-#inicioSesion:active{
-    background-color: #0b6e4f7a;
-}
-#registro{
-    background-color: #DE541E;
-}
-#registro:hover{
-    background-color: #de541eb2;
-}
-#registro:active{
-    background-color: #de541e73;
-}
-h1{
-    background-color: #F8E6D2;
-    order:3;
-}
-nav {
-    height: inherit;
-    display: flex;
+.justify-content-flex-start{
     justify-content: flex-start;
+}
+.align-items-center{
     align-items: center;
 }
-nav a{
-    margin: 1.5%;
+.align-items-flex-start{
+    align-items: flex-start;
 }
-.container{
-    height: inherit;
-    /* width: 50vw; */
+.align-content-center{
+    align-content: center;
+}
+.flex-direction-column{
+    flex-direction: column;
+}
+.flex-wrap-wrap-reverse{
+    flex-wrap: wrap-reverse;
+}
+.order-3{
+    order:3;
 }
 
-@media (max-width: 1100px) {
-    main{
-        padding-left: 25%;
-        padding-right: 25%;
-    }
+/* COLOR BACKGROUNDS */
+
+.morado{
+    background-color: #652E79;
 }
+.morado:hover{
+    background-color: #b256d4;
+}
+.morado:active{
+    background-color: #df85ff;
+}
+.rosa{
+    background-color: #E644D7;
+}
+.rosa:hover{
+    background-color: #ff4ced;
+}
+.rosa:active{
+    background-color: #ff83f3;
+}
+.rosa{
+    background-color: #E644D7;
+}
+.rosa:hover{
+    background-color: #ff4ced;
+}
+.naranja{
+    background-color: #FFAA33;
+}
+.naranja:hover{
+    background-color: #f9c276;
+}
+.naranja:active{
+    background-color: #ffdcab;
+}
+.blanco{
+    background-color: #ECEFF4;
+}
+
+/* TIPOGRAFIAS Y COLORES */
+
+.bold-heading {
+    font-family: "Kumbh Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
+    font-variation-settings: "YOPQ" 300;
+}
+.regular-paragraph{
+    font-family: "Kulim Park", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.bold-paragraph{
+    font-family: "Kulim Park", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+.texto-blanco{
+    color: #fff;
+}
+.texto-negro{
+    color: #000;
+}
+
+/* BORDERS */
+
+.redondeado{
+    border-radius: .3rem;
+}
+.sin-borde{
+    border: 0;
+}
+
+/* INDEX */
+
+.index{
+    padding-left: 35%;
+    padding-right: 35%;;
+    height: 100vh;
+}
+.index button{
+    width: 13vw;
+    height: 9vh;
+    margin: 2%;
+    font-size: medium;
+}
+
+/* INICIO Y REGISTRO */
+
+.ingreso{
+    margin: 10vh 0 10vh 0;
+    width: 30rem;
+    min-height: 60vh;
+    /* padding: 3rem 2rem 3rem 2rem; */
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: .3rem;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* FORM */
+
+form{
+    padding: 2.5vw;
+}
+input,select{
+    min-height: 40px;
+    border: 1px solid black;
+    margin: .6rem 0 .6rem 0;
+}
+form button {
+    min-height: 40px;
+    font-size: medium;
+    color: white;
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+}
+
+
 
 @media (max-width: 800px) {
-    main{
+    .index{
         padding-left: 28vw;
         padding-right: 28vw;
     }
-    main button{
+    .index button{
         height: 5vh;
         min-height: 34px;
         margin: 2%;
         flex: 100%;
+    }
+    .ingreso{
+        margin: 0;
+        width: 100vw;
+        min-height: 100vh;
+        background-color: #ECEFF4;
+        border-radius: 0;
+    }
+    form{
+        grid-template-columns: 80vw;
     }
 }
