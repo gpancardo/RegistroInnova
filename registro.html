@@ -13,7 +13,7 @@
 </head>
 <body class="display-flex justify-content-center align-items-center">
     <main class="ingreso display-flex justify-content-flex-start flex-direction-column glass">
-        <form>
+        <form class="display-flex flex-direction-column align-items-center">
             <h1 class="bold-heading">Registrarse</h1>
             <div class="numeroCuenta display-flex flex-direction-column regular-paragraph">
                 <label for="numeroCuenta">Número de Cuenta:</label>
@@ -54,8 +54,12 @@
                 <label for="contrasena">Contraseña</label>
                 <input type="password" name="contrasena" id="contrasena" class="redondeado">
             </div>
-            <div class="enviar display-flex flex-direction-column">
-                <button type="submit" class="rosa bold-paragraph texto-blanco redondeado sin-borde">Registrarse</button>
+            <div class="boletin display-flex align-items-center regular-paragraph">
+                <label for="boletin">Recibir el boletin semanalmente</label>
+                <input type="checkbox" name="boletin" id="boletin" class="redondeado sin-borde">
+            </div>
+            <div class="enviar display-flex justify-content-center">
+                <button type="submit" class="rosa bold-paragraph texto-blanco texto-medio redondeado sin-borde largo alto">Registrarse</button>
             </div>
         </form>
     </main>

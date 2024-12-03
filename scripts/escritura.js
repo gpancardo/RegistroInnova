@@ -43,15 +43,24 @@
             const ponenteDiv = crearInput("Ponente: ","text","ponente",true);
             const horaDiv = crearInput("Hora: ","time","hora",true);
 
+            // Div para botones
+            const botonesDiv = document.createElement("div");
+            botonesDiv.classList.add("display-flex");
+            botonesDiv.classList.add("justify-content-space-around");
+            botonesDiv.classList.add("flex-direction-row");
+
             // Botón para agregar subeventos
             const agregarSubevento = document.createElement("button");
             agregarSubevento.type = "button";
             agregarSubevento.classList.add("morado");
             agregarSubevento.classList.add("redondeado");
             agregarSubevento.classList.add("texto-blanco");
+            agregarSubevento.classList.add("texto-medio");
+            agregarSubevento.classList.add("bold-paragraph");
+            agregarSubevento.classList.add("sin-borde");
+            agregarSubevento.classList.add("largo");
+            agregarSubevento.classList.add("alto");
             agregarSubevento.textContent = "Agregar Subevento";
-            const botonesDiv = document.createElement("div");
-            botonesDiv.classList.add("botones");
             botonesDiv.appendChild(agregarSubevento);
 
             // Evento para agregar subeventos de forma infinita
@@ -66,7 +75,12 @@
             completar.type = "button";
             completar.classList.add("rosa");
             completar.classList.add("redondeado");
+            completar.classList.add("texto-medio");
             completar.classList.add("texto-blanco");
+            completar.classList.add("bold-paragraph");
+            completar.classList.add("sin-borde");
+            completar.classList.add("largo");
+            completar.classList.add("alto");
             completar.textContent = "Completar";
             botonesDiv.appendChild(completar);
 
