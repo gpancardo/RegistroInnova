@@ -1,4 +1,4 @@
-body{
+/* body{
     padding: 2rem;
 }
 main {
@@ -9,7 +9,7 @@ main {
     border-radius: .3rem;
     background-color: hsl(218, 27%, 94%);
     padding: 2rem;
-}
+} */
 .evento{
     width: 100%;
     /* display: flex;

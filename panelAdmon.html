@@ -13,26 +13,26 @@
     <title>Panel</title>
 </head>
 <body class="display-flex justify-content-center align-items-flex-start">
-    <main>
-        <h1>Panel de Administración</h1>
+    <main class="desktop display-flex justify-content-center align-content-flex-end align-items-flex-end flex-wrap-wrap-reverse">
+        <h1 class="bold-heading">Panel de Administración</h1>
         <div id="container" class="dropdownContainer">
-            <button onclick="cambiarEstado()" id="menu-boton" class="dropEventos grid-item"><h2>Eventos</h2></button>
+            <button onclick="cambiarEstado()" id="menu-boton" class="dropEventos grid-item"><h2 class="bold-heading">Eventos</h2></button>
             <ol id="menuEventos" class="contenidoDespliegue grid-item">
                 <li><p>#</p><p class="titulo">Nombre del evento</p><p>Horas por subevento</p><p>Horas por evento</p></li>
                 <li class="evento"><p>1</p><p class="titulo">Festival del Emprendimiento</p><p>10</p><p>10</p></li>
                 <li class="evento"><p>2</p><p class="titulo">Festival del Emprendimiento</p><p>10</p><p>10</p></li>
             </ol>
-            <button class="grid-item naranja" onclick="escritura('evento')">Crear evento</button>
-            <button class="grid-item naranja" onclick="escritura('evento')">Editar evento</button>
+            <button class="grid-item naranja bold-paragraph" onclick="escritura('evento')">Crear evento</button>
+            <button class="grid-item naranja bold-paragraph" onclick="escritura('evento')">Editar evento</button>
         </div>
         <div class="descarga">
-            <h2>Descarga</h2>
-            <p>Descargar todos</p>
-            <button class="morado">.csv</button>
-            <button class="rosa">.json</button>
-            <p>Descargar uno</p>
-            <button class="morado">.csv</button>
-            <button class="rosa">.json</button>
+            <h2 class="bold-heading">Descarga</h2>
+            <p class="regular-paragraph">Descargar todos</p>
+            <button class="morado texto-blanco bold-paragraph">.csv</button>
+            <button class="rosa texto-blanco bold-paragraph">.json</button>
+            <p class="regular-paragraph">Descargar uno</p>
+            <button class="morado texto-blanco bold-paragraph">.csv</button>
+            <button class="rosa texto-blanco bold-paragraph">.json</button>
         </div>
     </main>
     <script src="scripts/escritura.js"></script>

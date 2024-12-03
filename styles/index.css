@@ -21,8 +21,14 @@ body{
 .align-items-flex-start{
     align-items: flex-start;
 }
+.align-items-flex-end{
+    align-items: flex-end;
+}
 .align-content-center{
     align-content: center;
+}
+.align-content-flex-end{
+    align-content: flex-end;
 }
 .flex-direction-column{
     flex-direction: column;
@@ -53,12 +59,6 @@ body{
 }
 .rosa:active{
     background-color: #ff83f3;
-}
-.rosa{
-    background-color: #E644D7;
-}
-.rosa:hover{
-    background-color: #ff4ced;
 }
 .naranja{
     background-color: #FFAA33;
@@ -138,6 +138,40 @@ body{
     border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
+/* DESKTOP */
+
+.desktop {
+    margin: 2rem;
+    min-height: 72.5vh;
+    background-color: #ECEFF4;
+    border-radius: .3rem;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    padding: 3rem 2rem 3rem 2rem;
+}
+.descarga{
+    width: 20vw;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    font-family: "Kulim Park", serif;
+    font-weight: 400;
+    font-style: normal;
+    /* grid */
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+}
+.descarga p{
+    margin-top: .5rem;
+    grid-column: span 2;
+}
+.descarga button{
+    height: 5vh;
+    min-height: 30px;
+    grid-column: span 1;
+    border: 0;
+    border-radius: .3rem;
+    margin: 0 .3rem 0 .3rem;
+}
+
 /* FORM */
 
 form{
@@ -151,7 +185,6 @@ input,select{
 form button {
     min-height: 40px;
     font-size: medium;
-    color: white;
     margin-top: 3vh;
     margin-bottom: 3vh;
 }

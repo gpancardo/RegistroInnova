@@ -35,78 +35,20 @@
 
             const tituloAdmin = document.createElement("h2");
             tituloAdmin.textContent="Administrar Evento";
+            tituloAdmin.classList.add("bold-heading");
 
-            // Campos para el evento principal
-            const tituloLabel = document.createElement("label");
-            tituloLabel.textContent = "Título: ";
-            const tituloInput = document.createElement("input");
-            tituloInput.classList.add("redondeado");
-            tituloInput.type = "text";
-            tituloInput.name = "titulo";
-            tituloInput.required = true;
-            const tituloDiv = document.createElement("div");
-            tituloDiv.appendChild(tituloLabel);
-            tituloDiv.appendChild(tituloInput);
-            tituloDiv.classList.add("display-flex");
-            tituloDiv.classList.add("flex-direction-column");
-
-            const descripcionLabel = document.createElement("label");
-            descripcionLabel.textContent = "Descripción: ";
-            const descripcionInput = document.createElement("input");
-            descripcionInput.classList.add("redondeado");
-            descripcionInput.type = "text";
-            descripcionInput.name = "descripcion";
-            descripcionInput.required = true;
-            const descripcionDiv = document.createElement("div");
-            descripcionDiv.appendChild(descripcionLabel);
-            descripcionDiv.appendChild(descripcionInput);
-            descripcionDiv.classList.add("display-flex");
-            descripcionDiv.classList.add("flex-direction-column");
-
-            const ubicacionLabel = document.createElement("label");
-            ubicacionLabel.textContent = "Ubicación: ";
-            const ubicacionInput = document.createElement("input");
-            ubicacionInput.classList.add("redondeado");
-            ubicacionInput.type = "text";
-            ubicacionInput.name = "ubicacion";
-            ubicacionInput.required = true;
-            const ubicacionDiv = document.createElement("div");
-            ubicacionDiv.appendChild(ubicacionLabel);
-            ubicacionDiv.appendChild(ubicacionInput);
-            ubicacionDiv.classList.add("display-flex");
-            ubicacionDiv.classList.add("flex-direction-column");
-
-            const ponenteLabel = document.createElement("label");
-            ponenteLabel.textContent = "Ponente: ";
-            const ponenteInput = document.createElement("input");
-            ponenteInput.classList.add("redondeado");
-            ponenteInput.type = "text";
-            ponenteInput.name = "ponente";
-            ponenteInput.required = true;
-            const ponenteDiv = document.createElement("div");
-            ponenteDiv.appendChild(ponenteLabel);
-            ponenteDiv.appendChild(ponenteInput);
-            ponenteDiv.classList.add("display-flex");
-            ponenteDiv.classList.add("flex-direction-column");
-
-            const horaLabel = document.createElement("label");
-            horaLabel.textContent = "Hora: ";
-            const horaInput = document.createElement("input");
-            horaInput.classList.add("redondeado");
-            horaInput.type = "time";
-            horaInput.name = "hora";
-            horaInput.required = true;
-            const horaDiv = document.createElement("div");
-            horaDiv.appendChild(horaLabel);
-            horaDiv.appendChild(horaInput);
-            horaDiv.classList.add("display-flex");
-            horaDiv.classList.add("flex-direction-column");
+            const tituloDiv = crearInput("Título: ","text","titulo",true);
+            const descripcionDiv = crearInput("Descripción: ","text","descripcion",true);
+            const ubicacionDiv = crearInput("Ubicación: ","text","ubicacion",true);
+            const ponenteDiv = crearInput("Ponente: ","text","ponente",true);
+            const horaDiv = crearInput("Hora: ","time","hora",true);
 
             // Botón para agregar subeventos
             const agregarSubevento = document.createElement("button");
             agregarSubevento.type = "button";
             agregarSubevento.classList.add("morado");
             agregarSubevento.classList.add("redondeado");
+            agregarSubevento.classList.add("texto-blanco");
             agregarSubevento.textContent = "Agregar Subevento";
             const botonesDiv = document.createElement("div");
             botonesDiv.classList.add("botones");
@@ -116,13 +58,15 @@
             agregarSubevento.addEventListener("click", function () {
                 const subeventoForm = createSubeventoForm();
                 botonesDiv.insertAdjacentElement("beforebegin", subeventoForm);
+                agregarCSS();
             });
 
             // Botón completar
             const completar = document.createElement("button");
             completar.type = "button";
             completar.classList.add("rosa");
-            agregarSubevento.classList.add("redondeado");
+            completar.classList.add("redondeado");
+            completar.classList.add("texto-blanco");
             completar.textContent = "Completar";
             botonesDiv.appendChild(completar);
 
@@ -149,6 +93,8 @@
 
             // Añadir el formulario al cuerpo o a un contenedor
             dropdownContainer.appendChild(form);
+            
+            agregarCSS();
         }
 
         function createSubeventoForm() {
@@ -158,64 +104,62 @@
 
             const tituloSub = document.createElement("h3");
             tituloSub.textContent="Subevento";
+            tituloSub.classList.add("bold-heading")
 
-            const tituloLabel = document.createElement("label");
-            tituloLabel.textContent = "Título: ";
-            const tituloInput = document.createElement("input");
-            tituloInput.classList.add("redondeado");
-            tituloInput.type = "text";
-            tituloInput.name = "subtitulo";
-            tituloInput.required = true;
-
-            const descripcionLabel = document.createElement("label");
-            descripcionLabel.textContent = "Descripción: ";
-            const descripcionInput = document.createElement("input");
-            descripcionInput.classList.add("redondeado");
-            descripcionInput.type = "text";
-            descripcionInput.name = "subdescripcion";
-            descripcionInput.required = true;
-
-            const ubicacionLabel = document.createElement("label");
-            ubicacionLabel.textContent = "Ubicación: ";
-            const ubicacionInput = document.createElement("input");
-            ubicacionInput.classList.add("redondeado");
-            ubicacionInput.type = "text";
-            ubicacionInput.name = "sububicacion";
-            ubicacionInput.required = true;
-
-            const ponenteLabel = document.createElement("label");
-            ponenteLabel.textContent = "Ponente: ";
-            const ponenteInput = document.createElement("input");
-            ponenteInput.classList.add("redondeado");
-            ponenteInput.type = "text";
-            ponenteInput.name = "subponente";
-            ponenteInput.required = true;
-
-            const horaLabel = document.createElement("label");
-            horaLabel.textContent = "Hora: ";
-            const horaInput = document.createElement("input");
-            horaInput.classList.add("redondeado");
-            horaInput.type = "time";
-            horaInput.name = "subhora";
-            horaInput.required = true;
+            const tituloDiv = crearInput("Título: ","text","titulo",true);
+            const descripcionDiv = crearInput("Descripción: ","text","descripcion",true);
+            const ubicacionDiv = crearInput("Ubicación: ","text","ubicacion",true);
+            const ponenteDiv = crearInput("Ponente: ","text","ponente",true);
+            const horaDiv = crearInput("Hora: ","time","hora",true);
 
             // Añadir campos al formulario de subevento
             subeventoForm.appendChild(tituloSub);
-            subeventoForm.appendChild(tituloLabel);
-            subeventoForm.appendChild(tituloInput);
+            subeventoForm.appendChild(tituloDiv);
             subeventoForm.appendChild(document.createElement("br"));
-            subeventoForm.appendChild(descripcionLabel);
-            subeventoForm.appendChild(descripcionInput);
+            subeventoForm.appendChild(descripcionDiv);
             subeventoForm.appendChild(document.createElement("br"));
-            subeventoForm.appendChild(ubicacionLabel);
-            subeventoForm.appendChild(ubicacionInput);
+            subeventoForm.appendChild(ubicacionDiv);
             subeventoForm.appendChild(document.createElement("br"));
-            subeventoForm.appendChild(ponenteLabel);
-            subeventoForm.appendChild(ponenteInput);
+            subeventoForm.appendChild(ponenteDiv);
             subeventoForm.appendChild(document.createElement("br"));
-            subeventoForm.appendChild(horaLabel);
-            subeventoForm.appendChild(horaInput);
+            subeventoForm.appendChild(horaDiv);
             subeventoForm.appendChild(document.createElement("br"));
 
             return subeventoForm;
+        }
+
+        function crearInput(labelTxt,type,name,required){
+            // Campos para el evento principal
+            const label = document.createElement("label");
+            label.textContent = labelTxt;
+            const input = document.createElement("input");
+            input.type = type;
+            input.name = name;
+            input.required = required;
+            const div = document.createElement("div");
+            div.appendChild(label);
+            div.appendChild(input);
+
+            return div;
+        }
+
+        function agregarCSS(){
+            
+            // Añadir clases css
+            let labels = document.querySelectorAll('label');
+            labels.forEach(label => {
+                label.classList.add('regular-paragraph');
+            });
+            let inputs = document.querySelectorAll('input');
+            inputs.forEach(input => {
+                input.classList.add('redondeado');
+            });
+            let divs = document.querySelectorAll('div');
+            divs.forEach(div => {
+                if(div.classList.item(0) == null){
+                    div.classList.add("display-flex");
+                    div.classList.add("flex-direction-column");
+                }
+            });
+
         }
