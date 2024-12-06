@@ -13,11 +13,19 @@
 </head>
 <body class="display-flex justify-content-center align-items-center">
     <main class="ingreso display-flex justify-content-flex-start flex-direction-column glass">
-        <form class="display-flex flex-direction-column align-items-center">
+        <form class="display-flex flex-direction-column align-items-center" action="php/registro.php" method="POST">
             <h1 class="bold-heading">Registrarse</h1>
+            <div class="nombre display-flex flex-direction-column regular-paragraph">
+                <label for="nombre">Nombre(s)</label>
+                <input type="text" name="nombre" id="nombre" class="redondeado">
+            </div>
+            <div class="apellidos display-flex flex-direction-column regular-paragraph">
+                <label for="apellidos">Apellidos</label>
+                <input type="text" name="apellidos" id="apellidos" class="redondeado">
+            </div>
             <div class="numeroCuenta display-flex flex-direction-column regular-paragraph">
                 <label for="numeroCuenta">Número de Cuenta:</label>
-                <input type="number" name="numeroCuenta" id="numeroCuenta" class="redondeado">
+                <input type="number" name="numero-cuenta" id="numeroCuenta" class="redondeado">
             </div>
             <div class="carrera display-flex flex-direction-column regular-paragraph">
                 <label for="carrera">Carrera</label>
@@ -38,14 +46,6 @@
                     <option value="Pedagogía">Pedagogía</option>
                 </select>
             </div>
-            <div class="nombre display-flex flex-direction-column regular-paragraph">
-                <label for="nombre">Nombres</label>
-                <input type="text" name="nombre" id="nombre" class="redondeado">
-            </div>
-            <div class="apellidos display-flex flex-direction-column regular-paragraph">
-                <label for="apellidos">Apellidos</label>
-                <input type="text" name="apellidos" id="apellidos" class="redondeado">
-            </div>
             <div class="correo display-flex flex-direction-column regular-paragraph">
                 <label for="correo">Correo Electrónico</label>
                 <input type="email" name="correo" id="correo" class="redondeado">
@@ -54,9 +54,9 @@
                 <label for="contrasena">Contraseña</label>
                 <input type="password" name="contrasena" id="contrasena" class="redondeado">
             </div>
-            <div class="boletin display-flex align-items-center regular-paragraph">
-                <label for="boletin">Recibir el boletin semanalmente</label>
-                <input type="checkbox" name="boletin" id="boletin" class="redondeado sin-borde">
+            <div class="boletin-mensual display-flex align-items-center regular-paragraph">
+                <label for="boletin-mensual">Recibir el boletin mensualmente</label>
+                <input type="checkbox" name="boletin-mensual" id="boletin-mensual" class="redondeado sin-borde">
             </div>
             <div class="enviar display-flex justify-content-center">
                 <button type="submit" class="rosa bold-paragraph texto-blanco texto-medio redondeado sin-borde largo alto">Registrarse</button>
