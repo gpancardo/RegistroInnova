@@ -1,17 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?fami   ly=Kumbh+Sans:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Kulim+Park:ital,wght@0,200;0,300;0,400;0,600;0,700;1,200;1,300;1,400;1,600;1,700&family=Kumbh+Sans:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles/index.css" />
-    <title>Panel</title>
-</head>
-<body class="display-flex justify-content-center align-items-flex-start">
+---
+import Layout from "../layouts/Layout.astro"
+---
+
+<Layout title="Panel de Administración" classess="display-flex justify-content-center align-items-flex-start">
     <main class="desktop display-flex justify-content-center align-content-flex-end align-items-flex-end flex-wrap-wrap-reverse">
         <h1 class="bold-heading order-3 titulo-desktop">Panel de Administración</h1>
         <div id="container" class="dropdownContainer">
@@ -36,7 +27,7 @@
             <button class="rosa texto-blanco sin-borde bold-paragraph">.json</button>
         </div>
     </main>
-    <script src="scripts/escritura.js"></script>
-    <script src="scripts/dropdown.js"></script>
-</body>
-</html>
+    <script is:inline src="/scripts/escritura.js"></script>
+    <script is:inline src="/scripts/dropdown.js"></script>
+</Layout>
+

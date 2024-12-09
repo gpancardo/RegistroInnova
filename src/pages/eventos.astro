@@ -1,0 +1,41 @@
+---
+import Layout from "../layouts/Layout.astro"
+---
+
+<Layout title="Eventos">
+    <main class="desktop display-flex flex-direction-column align-items-center">
+        <h1 class="bold-heading">Eventos</h1>
+        <button class="misEventos morado texto-blanco redondeado sin-borde alto largo" onclick="location.href='mis-eventos'">Ver Mis Eventos</button>
+        <div class="eventos regular-paragraph">
+            <div class="evento">
+                <p><strong>Emprendimiento para Jóvenes</strong></p>
+                <p>¿Cuál es el rol de los jóvenes en el ambiente emprendedor?</p>
+                <p><strong>Ponente: Daniela Carmona</strong></p>
+                <p>Daniela Carmona (CER de ChocoTour) compartirá sus experiencias en el mundo de los negocios como joven.</p>
+                <p><strong>Auditorio "Hermilla Galindo"</strong><strong>29 de febrero 2025</strong><strong>12:00 - 13:00</strong></p>
+                <p>Cupo: 30/100</p>
+                <button class="registrarse naranja texto-blanco bold-paragraph redondeado sin-borde medio largo" onclick="location.href='registro-exitoso'">Registrarme</button>
+                <hr>
+            </div>
+            <div class="evento">
+                <p><strong>Ciclo de Conferencias: Emprendimiento Turístico en el Estado de México</strong></p>
+                <p>Conoce el mundo del Emprendimiento Turístico en el Estado de México de la mano de nuestros ponentes.</p>
+                <p><strong>Ponente: Héctor Rosales</strong></p>
+                <p>¿Cómo ofrecer servicios turísticos?</p>
+                <p><strong>Auditorio "Hermilla Galindo"</strong><strong>01 de marzo 2025</strong><strong>10:00 - 11:00</strong></p>
+                <p>Cupo: 100/100</p>
+                <button class="lleno morado texto-blanco bold-paragraph redondeado sin-borde medio largo" disabled>Cupo cubierto</button>
+                <hr>
+            </div>
+            <div class="evento">
+                <p><strong>TechUNAM</strong></p>
+                <p>Muestra de empresas tecnológicas.</p>
+                <p><strong>Ponente: Marcelino Alba</strong></p>
+                <p>Análisis de la composición de los turistas que visitan el Estado de México.</p>
+                <p><strong>Auditorio "Hermilla Galindo"</strong><strong>01 de marzo 2025</strong><strong>10:00 - 11:00</strong></p>
+                <p>Cupo: 85/100</p>
+                <button class="inscrito rosa texto-blanco redondeado sin-borde medio largo" disabled>Inscrito</button>
+            </div>
+        </div>
+    </main>
+</Layout>

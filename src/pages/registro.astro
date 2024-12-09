@@ -1,0 +1,57 @@
+---
+import Layout from "../layouts/Layout.astro"
+---
+
+<Layout title="Registro" classess="display-flex justify-content-center align-items-center">
+    <main class="ingreso display-flex justify-content-flex-start flex-direction-column glass">
+        <form class="display-flex flex-direction-column align-items-center" action="php/registro.php" method="POST">
+            <h1 class="bold-heading">Registrarse</h1>
+            <div class="nombre display-flex flex-direction-column regular-paragraph">
+                <label for="nombre">Nombre(s)</label>
+                <input type="text" name="nombre" id="nombre" class="redondeado">
+            </div>
+            <div class="apellidos display-flex flex-direction-column regular-paragraph">
+                <label for="apellidos">Apellidos</label>
+                <input type="text" name="apellidos" id="apellidos" class="redondeado">
+            </div>
+            <div class="numeroCuenta display-flex flex-direction-column regular-paragraph">
+                <label for="numeroCuenta">Número de Cuenta:</label>
+                <input type="number" name="numero-cuenta" id="numeroCuenta" class="redondeado">
+            </div>
+            <div class="carrera display-flex flex-direction-column regular-paragraph">
+                <label for="carrera">Carrera</label>
+                <select name="carrera" id="carrera" class="redondeado">
+                    <option value="Derecho">Derecho</option>
+                    <option value="Economía">Econonomía</option>
+                    <option value="RRII">RRII</option>
+                    <option value="Arquitectura">Arquitectura</option>
+                    <option value="ICO">ICO</option>
+                    <option value="IEE">IEE</option>
+                    <option value="IM">IM</option>
+                    <option value="IC">IC</option>
+                    <option value="II">II</option>
+                    <option value="Sociología">Sociología</option>
+                    <option value="PDA">PDA</option>
+                    <option value="CyP">CyP</option>
+                    <option value="Diseño Industrial">Diseño Industrial</option>
+                    <option value="Pedagogía">Pedagogía</option>
+                </select>
+            </div>
+            <div class="correo display-flex flex-direction-column regular-paragraph">
+                <label for="correo">Correo Electrónico</label>
+                <input type="email" name="correo" id="correo" class="redondeado">
+            </div>
+            <div class="contrasena display-flex flex-direction-column regular-paragraph">
+                <label for="contrasena">Contraseña</label>
+                <input type="password" name="contrasena" id="contrasena" class="redondeado">
+            </div>
+            <div class="boletin-mensual display-flex align-items-center regular-paragraph">
+                <label for="boletin-mensual">Recibir el boletin mensualmente</label>
+                <input type="checkbox" name="boletin-mensual" id="boletin-mensual" class="redondeado sin-borde">
+            </div>
+            <div class="enviar display-flex justify-content-center">
+                <button type="submit" class="rosa bold-paragraph texto-blanco texto-medio redondeado sin-borde largo alto">Registrarse</button>
+            </div>
+        </form>
+    </main>
+</Layout>

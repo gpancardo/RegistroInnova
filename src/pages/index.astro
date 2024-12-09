@@ -1,17 +1,11 @@
 ---
-// Welcome to Astro! Everything between these triple-dash code fences
-// is your "component frontmatter". It never runs in the browser.
-console.log('This runs in your terminal, not the browser!');
+import Layout from "../layouts/Layout.astro";
 ---
-<!-- Below is your "component template." It's just HTML, but with
-    some magic sprinkled in to help you build great templates. -->
-<html>
-  <body>
-    <h1>Hello, World! soy ANA PAOULA</h1>
-  </body>
-</html>
-<style>
-  h1 {
-    color: orange;
-  }
-</style>
+<Layout title="Inicio">
+    <main class="index display-flex justify-content-center align-content-center flex-wrap-wrap-reverse">
+        <h1 class="order-3 bold-heading texto-blanco">¡Bienvenido!</h1>
+        <button class="morado bold-paragraph texto-blanco redondeado sin-borde grande texto-grande" onclick="location.href='inicio-sesion'">Iniciar Sesión</button>
+        <button class="rosa bold-paragraph texto-blanco redondeado sin-borde grande texto-grande" onclick="location.href='registro'">Registrarse</button>
+    </main>
+</Layout>
+
