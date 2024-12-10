@@ -1,14 +1,16 @@
 ---
+import CardEventoSimple from "../components/CardEventoSimple.astro"
 import Layout from "../layouts/Layout.astro"
 ---
 
 <Layout title="Registro Exitoso">
-    <main class="desktop">
-        <h1>Registro Exitoso</h1>
-        <div class="evento">
-            <p><strong>Emprendimiento para jóvenes</strong></p>
-            <p><strong>Auditorio "Hermilla Galindo"</strong><strong>29 de febrero 2025</strong><strong>12:00 - 13:00</strong></p>
-            <button id="misEventos" onclick="location.href='misEventos.html'">Ver Mis Eventos</button>
+    <main class="desktop display-flex flex-direction-column align-items-center">
+        <h1 class="bold-heading">Registro Exitoso</h1>
+        <button class="misEventos morado texto-blanco redondeado sin-borde alto largo" onclick="location.href='mis-eventos'">Ver Mis Eventos</button>
+        <div class="eventos regular-paragraph display-flex flex-wrap-wrap justify-content-space-around">
+            <CardEventoSimple
+                titulo="Emprendimiento para Jóvenes"
+                lugar='Auditorio "Hermilla Galindo"' fecha="29 de febrero 2025" horario="12:00 - 13:00"/>
         </div>
     </main>
 </Layout>

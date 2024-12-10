@@ -1,0 +1,13 @@
+---
+const { titulo,lugar,fecha,horario,cupo,imagen } = Astro.props;
+---
+<div class="evento">
+    <p><strong>{ titulo }</strong></p>
+    <p class="display-flex flex-direction-column">
+        <strong>{ lugar }</strong>
+        <strong>{ fecha }</strong>
+        <strong>{ horario }</strong>
+    </p>
+    <p>Cupo: { cupo }</p>
+    <img src={ imagen } alt="QR">
+</div>

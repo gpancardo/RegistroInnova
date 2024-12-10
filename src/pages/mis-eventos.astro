@@ -1,20 +1,18 @@
 ---
+import CardEventoFinalizado from "../components/CardEventoFinalizado.astro"
+import CardMisEventos from "../components/CardMisEventos.astro"
 import Layout from "../layouts/Layout.astro"
 ---
 
 <Layout title="Mis Eventos">
-    <main class="desktop">
-        <h1>Mis Eventos</h1>
-        <div class="evento">
-            <p><strong>ABC del crédito</strong></p>
-            <p>Finalizado</p>
-        </div>
-        <hr>
-        <div class="evento">
-            <p><strong>Emprendimiento para jóvenes</strong></p>
-            <p><strong>Auditorio "Hermilla Galindo"</strong><strong>29 de febrero 2025</strong><strong>12:00 - 13:00</strong></p>
-            <p>Cupo: 31/100</p>
-            <img src="/scripts/_Feria del Emprendimiento.png" alt="QR">
+    <main class="desktop display-flex flex-direction-column align-items-center">
+        <h1 class="bold-heading">Mis Eventos</h1>
+        <div class="eventos regular-paragraph display-flex flex-wrap-wrap justify-content-space-around">
+            <CardEventoFinalizado titulo="ABC del crédito"/>
+            <CardMisEventos 
+                titulo="Emprendimiento para jóvenes"
+                lugar='Auditorio "Hermilla Galindo"' fecha="29 de febrero 2025" horario="12:00 - 13:00" cupo="31/100"
+                imagen="/scripts/_Feria del Emprendimiento.png"/>
         </div>
     </main>
 </Layout>

@@ -1,0 +1,16 @@
+---
+const { titulo,pregunta,ponente,descripcion,lugar,fecha,horario,cupo,classess,action,disable,button } = Astro.props;
+---
+<div class="evento">
+    <p><strong>{ titulo }</strong></p>
+    <p>{ pregunta }</p>
+    <p><strong>Ponente: { ponente }</strong></p>
+    <p>{ descripcion }</p>
+    <p class="display-flex flex-direction-column">
+        <strong>{ lugar }</strong>
+        <strong>{ fecha }</strong>
+        <strong>{ horario }</strong>
+    </p>
+    <p>Cupo: { cupo }</p>
+    <button class={ classess } onclick={ action } disabled={ disable }>{ button }</button>
+</div>

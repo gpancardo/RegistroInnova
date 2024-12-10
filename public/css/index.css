@@ -18,6 +18,9 @@ body{
 .justify-content-space-around{
     justify-content: space-around;
 }
+.justify-content-space-between{
+    justify-content: space-between;
+}
 .align-items-center{
     align-items: center;
 }
@@ -41,6 +44,9 @@ body{
 }
 .flex-wrap-wrap-reverse{
     flex-wrap: wrap-reverse;
+}
+.flex-wrap-wrap{
+    flex-wrap: wrap;
 }
 .order-3{
     order:3;
@@ -143,9 +149,6 @@ body{
 .largo{
     width: 13rem;
 }
-.corto{
-
-}
 .grande{
     width: 15vw;
     height: 9vh;
@@ -226,16 +229,30 @@ body{
 
 /* EVENTOS */
 .eventos{
-    display: grid;
-    grid-template-columns: 50% 50%;
+    margin: 2rem 0 2rem 0;
 }
 .evento{
-    width: 100%;
+    width: 16rem;
+    height: 24rem;
+    margin: 0 .5rem 0 .5rem;
+    padding-bottom: 1rem;
+    /* display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 3.5rem 2rem 1rem 4.5rem 3.5rem 1rem 1rem;
+    row-gap: 1rem; */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
+.evento-corto{
+    height: 6rem;
+}
+.evento p,.evento button, .evento img{
+    margin: 1rem 0 0 0;
 }
 .evento p{
     width: 100%;
-    display: flex;
-    flex-direction: column;
 }
 
 /* FORM */
@@ -317,9 +334,15 @@ li p{
     .index{
         margin: 0 20vw 0 20vw;
     }
-    .ingreso, .desktop{
+    .ingreso{
         margin: 0;
         width: 100vw;
+        min-height: 100vh;
+        background-color: #ECEFF4;
+        border-radius: 0;
+    }
+    .desktop{
+        margin: 0;
         min-height: 100vh;
         background-color: #ECEFF4;
         border-radius: 0;
@@ -327,7 +350,12 @@ li p{
     form{
         grid-template-columns: 80vw;
     }
-    .eventos{
-        grid-template-columns: auto;
+}
+
+@media (max-width: 600px) {
+    .evento{
+        border-bottom: 1px solid #000;
+        margin-bottom: 1rem;
+        /* height: fit-content; */
     }
 }
